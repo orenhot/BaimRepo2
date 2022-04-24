@@ -1,3 +1,17 @@
 #Alternate default index pages
-DirectoryIndex index.php
-AllowOverride All
+<Directory "/">
+    AllowOverride All
+</Directory>
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    
+</IfModule>
+<IfModule dir_module>
+    DirectoryIndex index.php
+</IfModule>
+
