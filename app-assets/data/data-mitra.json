@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "no": 1,
+      "id": 1,
+      "mitra": "PT. Telkom Indonesia",
+      "jenis_transaksi": "Pos Kilat Khusus",
+      "jml_transaksi": "130",
+      "tanggal": "02/04/2022",
+      "bsu": "12.300.450"
+    }
+  ]
+}
