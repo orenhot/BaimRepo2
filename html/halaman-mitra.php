@@ -56,7 +56,7 @@
                     <li class="nav-item"><a class="nav-link menu-toggle" href="#"><i class="ficon" data-feather="menu"></i></a></li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li class="nav-item d-none d-lg-block"><span style="color: white;font-size: 1.5em">Dashboard KC Cimahi 40500</span> 
+                    <li class="nav-item d-none d-lg-block"><span style="color: white;font-size: 1.5em">Data Transaksi Mitra</span> 
                         <div class="bookmark-input search-input">
                             <div class="bookmark-input-icon"><i data-feather="search"></i></div>
                             <input class="form-control input" type="text" placeholder="Bookmark" tabindex="0" data-search="search">
@@ -150,7 +150,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder">Suciawaty Nurjanah</span><span class="user-status">Manajer Penjualan</span></div><span class="avatar"><img class="round" src="../app-assets/images/portrait/small/avatar-s-27.jpg" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span>
+                        <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder">Thomas Shelby</span><span class="user-status">Admin Telkomsel</span></div><span class="avatar"><img class="round" src="../app-assets/images/portrait/small/avatar-s-26.jpg" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
                         <a class="dropdown-item" href="page-profile.html">
@@ -272,7 +272,7 @@
                 </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="mydashboard.php"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Email">Dashboard Saya</span></a>
                 </li>
-                <li class="active"><a class="d-flex align-items-center" href="mydashboard.php"><i data-feather="file-plus"></i><span class="menu-title text-truncate" data-i18n="Email">Kelola Invoice</span></a>
+                <li class="nav-item"><a class="d-flex align-items-center" href="kelola-invoice.php"><i data-feather="file-plus"></i><span class="menu-title text-truncate" data-i18n="Email">Kelola Invoice</span></a>
                 </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Invoice">Laporan</span></a>
                     <ul class="menu-content">
@@ -288,7 +288,7 @@
                 </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="create-user.php"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="Chat">Create Akun Mitra</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="halaman-mitra.php"><i data-feather="user-plus"></i><span class="menu-title text-truncate" data-i18n="Chat">Halaman Mitra</span></a>
+                <li class="active"><a class="d-flex align-items-center" href="halaman-mitra.php"><i data-feather="user-plus"></i><span class="menu-title text-truncate" data-i18n="Chat">Halaman Mitra</span></a>
                 </li>
             </ul>
         </div>
@@ -304,90 +304,131 @@
                 <div class="row">
                     <!-- Layer Control Starts -->
                     <div class="col-12">
-                        <div class="card"> 
-                            <div class="card-header border-bottom">
-                                <h4 class="card-title">Kelola Invoice</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="#" class="invoice-repeater">
+                                    <div data-repeater-list="invoice">
+                                        <div data-repeater-item>
+                                            <div class="row d-flex align-items-end">
+
+                                                <div class="col-md-2 col-12">
+                                                    <div class="mb-1">
+                                                        <label class="form-label" for="itemcost">Bulan</label>
+                                                        <select class="select2 form-select" id="select2-basic1">
+                                                            <option value="SR">Januari</option>
+                                                            <option value="AK">Februari</option>
+                                                            <option value="HI">Maret</option>
+                                                            <option value="CA">April</option>
+                                                            <option value="NV">Mei</option>
+                                                            <option value="OR">Juni</option>
+                                                            <option value="WA">Juli</option>
+                                                            <option value="WA">Agustus</option>
+                                                            <option value="WA">September</option>
+                                                            <option value="WA">Oktober</option>
+                                                            <option value="WA">November</option>
+                                                            <option value="WA">Desember</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2 col-12 mb-50">
+                                                    <div class="mb-1">
+                                                        <button class="btn btn-outline-primary text-nowrap px-1" data-repeater-delete type="button">
+                                                            <span>Tampilkan</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                            <table class="dt-column-search table table-responsive">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card">
+                            <table class="datatables-basic3 table">
                                 <thead>
                                     <tr>
                                         <!-- <th>No</th> -->
-                                        <th>id</th>
-                                        <th>Mitra</th>
-                                        <th>No. PKS</th>
-                                        <th>Contact Person</th>
+                                        <th>No</th>
+                                        <th>ID Transaksi</th>
+                                        <th>Tanggal</th>
+                                        <th>Produk</th>
+                                        <th>Jenis Kiriman</th>
+                                        <th>Jumlah Transaksi</th>
+                                        <th>Total Tagihan</th>
                                         <th>Status</th>
-                                        <th>Deadline</th>
-                                        <th>Jumlah Tagihan</th>
-                                        <th>Edit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <!-- <td>1</td> -->
+                                        <td>1</td>
                                         <td>MT001</td>
-                                        <td>PT. Telkom Indonesia</td>
-                                        <td>POS/S123P/2021</td>
-                                        <td>aaa@gmail.com</td>
-                                        <td><span class="badge badge-light-danger">Dihentikan</span></td>
-                                        <td>4 Mei 2022</td>
+                                        <td>01/04/2022</td>
+                                        <td>Pakaian</td>
+                                        <td>Pos Kilat Khusus</td>
+                                        <td>2115</td>
                                         <td>Rp. 15.250.000</td>
-                                        <td><a href="preview-invoice.php" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i> Buat Invoice</a></td>
+                                        <td><span class="badge badge-light-success">Terkirim</span></td>
+                                        <!-- <td><button type="button" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i></button></td> -->
                                     </tr>
                                     <tr>
-                                        <!-- <td>2</td> -->
+                                        <td>2</td>
                                         <td>MT002</td>
-                                        <td>Shopee Pte. Ltd</td>
-                                        <td>POS/S122P/2021</td>
-                                        <td>bbb@gmail.com</td>
-                                        <td><span class="badge badge-light-warning">Peringatan</span></td>
-                                        <td>4 Mei 2022</td>
+                                        <td>02/04/2022</td>
+                                        <td>Elektronik</td>
+                                        <td>Pos Kilat Khusus</td>
+                                        <td>598</td>
                                         <td>Rp. 8.250.000</td>
-                                        <td><a href="preview-invoice.php" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i> Buat Invoice</a></td>
+                                        <td><span class="badge badge-light-success">Terkirim</span></td>
+                                        <!-- <td><button type="button" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i></button></td> -->
                                     </tr>
                                     <tr>
-                                        <!-- <td>3</td> -->
+                                        <td>3</td>
                                         <td>MT003</td>
-                                        <td>Lazada Group</td>
-                                        <td>POS/S332P/2021</td>
-                                        <td>ccc@gmail.com</td>
-                                        <td><span class="badge badge-light-info">Diproses</span></td>
-                                        <td>4 Mei 2022</td>
+                                        <td>02/04/2022</td>
+                                        <td>Pakaian</td>
+                                        <td>Pos Kilat Khusus</td>
+                                        <td>1125</td>
                                         <td>Rp. 34.100.000</td>
-                                        <td><a href="preview-invoice.php" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i> Buat Invoice</a></td>
+                                        <td><span class="badge badge-light-success">Terkirim</span></td>
+                                        <!-- <td><button type="button" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i></button></td> -->
                                     </tr>
                                     <tr>
-                                        <!-- <td>4</td> -->
+                                        <td>4</td>
                                         <td>MT004</td>
-                                        <td>PT. Soman Indonesia</td>
-                                        <td>POS/236P/2021</td>
-                                        <td>ddd@gmail.com</td>
-                                        <td><span class="badge badge-light-danger">Dihentikan</span></td>
-                                        <td>4 Mei 2022</td>
+                                        <td>03/04/2022</td>
+                                        <td>Pakaian</td>
+                                        <td>Pos Kilat Khusus</td>
+                                        <td>530</td>
                                         <td>Rp. 10.200.240</td>
-                                        <td><a href="preview-invoice.php" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i> Buat Invoice</a></td>
+                                        <td><span class="badge badge-light-warning">Retur</span></td>
+                                        <!-- <td><button type="button" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i></button></td> -->
                                     </tr>
                                     <tr>
-                                        <!-- <td>5</td> -->
+                                        <td>5</td>
                                         <td>MT005</td>
-                                        <td>PT. Indorama Indonesia</td>
-                                        <td>POS/233P/2021</td>
-                                        <td>fff@gmail.com</td>
-                                        <td><span class="badge badge-light-info">Diproses</span></td>
-                                        <td>4 Mei 2022</td>
+                                        <td>04/04/2022</td>
+                                        <td>Kesehatan</td>
+                                        <td>Pos Kilat Khusus</td>
+                                        <td>715</td>
                                         <td>Rp. 23.450.100</td>
-                                        <td><a href="preview-invoice.php" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i> Buat Invoice</a></td>
+                                        <td><span class="badge badge-light-success">Terkirim</span></td>
+                                        <!-- <td><button type="button" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i></button></td> -->
                                     </tr>
                                     <tr>
-                                        <!-- <td>6</td> -->
+                                        <td>6</td>
                                         <td>MT006</td>
-                                        <td>PT. HM Sampoerna</td>
-                                        <td>POS/S323P/2021</td>
-                                        <td>ggg@gmail.com</td>
-                                        <td><span class="badge badge-light-info">Diproses</span></td>
-                                        <td>4 Mei 2022</td>
+                                        <td>05/04/2022</td>
+                                        <td>Elektronik</td>
+                                        <td>Pos Kilat Khusus</td>
+                                        <td>2150</td>
                                         <td>Rp. 33.450.100</td>
-                                        <td><a href="preview-invoice.php" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i> Buat Invoice</a></td>
+                                        <td><span class="badge badge-light-warning">Retur</span></td>
+                                        <!-- <td><button type="button" class="btn btn-primary btn-sm"><i data-feather="edit-3"></i></button></td> -->
                                     </tr>
                                 </tbody>
                             </table>
@@ -447,7 +488,6 @@
 
     <!-- BEGIN: Page JS-->
     <script src="../app-assets/js/scripts/tables/table-datatables-basic.js"></script>
-    <script src="../app-assets/js/scripts/tables/table-datatables-advanced.js"></script>
     <!-- END: Page JS-->
 
     <!-- BEGIN: Page JS-->

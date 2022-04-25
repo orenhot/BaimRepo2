@@ -287,8 +287,8 @@
                 </li>
                 <li class="nav-item"><a class="d-flex align-items-center" href="create-user.php"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="Chat">Create Akun Mitra</span></a>
                 </li>
-                <!-- <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="check-square"></i><span class="menu-title text-truncate" data-i18n="Todo">Signature</span></a>
-                </li> -->
+                <li><a class="d-flex align-items-center" href="halaman-mitra.php"><i data-feather="user-plus"></i><span class="menu-title text-truncate" data-i18n="Chat">Halaman Mitra</span></a>
+                </li>
             </ul>
         </div>
     </div>
@@ -304,7 +304,7 @@
             <div class="content-body">
                 <!-- Dashboard Ecommerce Starts -->
                 <section id="dashboard-ecommerce">
-                    <div class="row">
+                    <div class="row match-height">
                         <!-- Transaction Card -->
                         <div class="col-lg-3 col-md-6 col-12">
                             <div class="card card-transaction">
@@ -452,7 +452,7 @@
                             <section id="chartjs-chart">
             
                                 <!-- Line Chart Starts-->
-                                <div class="row">
+                                <div class="row match-height">
                                     <div class="col-8">
                                         <div class="card">
                                             <div class="card-header">

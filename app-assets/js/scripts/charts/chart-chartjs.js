@@ -129,7 +129,7 @@ $(window).on('load', function () {
         datasets: [
           {
             data: [275, 90, 190],
-            barThickness: 35,
+            barThickness: 10,
             backgroundColor: successColorShade,
             borderColor: 'transparent'
           }
